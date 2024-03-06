@@ -90,4 +90,18 @@ const UserSchema = new mongoose.Schema({
   app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
   });
-  
+  const oracledb = require('oracledb');
+
+async function connect() {
+  const connection = await oracledb.getConnection({
+    user: 'SYSTEM', 
+    password: 'yatharth30',
+    connectString: 'localhost:1521/xe'
+  });
+
+  console.log('Connected to Oracle database!');
+
+  connection.close();
+}
+
+connect();

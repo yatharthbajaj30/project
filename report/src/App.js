@@ -26,7 +26,7 @@ function App() {
   };
   return (
     <div className="App">
-      {user.isAuthenticated && <NavBar role={user.role} onLogout={handleLogout} />}
+     
       
         <Routes>
         <Route
@@ -40,7 +40,7 @@ function App() {
               path="*"
               element={<Navigate to="/" />}
             />
-          ) : (<><Route path='/Data' element={<Data/>}></Route></>)}
+          ) : (<><Route path='/Data' element={<> {user.isAuthenticated && <NavBar role={user.role} onLogout={handleLogout} />}<Data/></>}></Route></>)}
         </Routes>
       
      

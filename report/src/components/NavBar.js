@@ -35,15 +35,9 @@ function NavBar() {
         >
           <li>About</li>
         </NavLink>
-        <NavLink to="/manualentry" activeClassName="active"
-          activeStyle={{ color: '#DB252A', textDecoration: 'none' }}
-          style={{ color: 'black', textDecoration: 'none' }}
-          hoverStyle={{ color: '#DB252A', textDecoration: 'none' }}
-        >
-          <li>Manual Entry</li>
-        </NavLink>
+   
         {userRole === 'admin' && (
-          <NavLink to="/manualdashboard" activeClassName="active"
+          <NavLink to="/Data" activeClassName="active"
             style={{ textDecoration: "none" }}>
             <li>Dashboard</li>
           </NavLink>
